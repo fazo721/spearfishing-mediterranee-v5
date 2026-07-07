@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#06111f">
+  <title>Permis Chasse Sous-Marine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="hero" id="hero">
+    <div class="kicker">Permis chasse sous-marine</div>
+    <h1>Révise les espèces de Méditerranée</h1>
+    <p>Guide + quiz aléatoire. Apprends le nom, la maille, la décision de prélèvement, l’habitat, la profondeur, la température et les bons réflexes avant sortie.</p>
+    <div class="topActions">
+      <button class="btn primary" data-action="quizSetup">Lancer un quiz</button>
+      <button class="btn" data-action="guide">Voir le guide</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="guidePanel">
+      <div class="toolbar">
+        <input id="search" class="input" placeholder="Rechercher poisson, habitat, profondeur...">
+        <select id="filter" class="input"></select>
+      </div>
+      <div id="guideGrid"></div>
+    </section>
+
+    <section id="quizSetupPanel" class="hidden">
+      <div class="setupCard">
+        <h2>🎯 Mode quiz</h2>
+        <p>Choisis une session. Les cartes sortent au hasard. Tu réponds au nom, à la maille si elle est demandée, à la décision et à l’habitat.</p>
+        <select id="quizCount" class="input">
+          <option value="10">10 cartes</option>
+          <option value="20">20 cartes</option>
+          <option value="30">30 cartes</option>
+          <option value="999">Toutes les cartes</option>
+        </select>
+        <button class="btn primary full" data-action="startQuiz">Commencer</button>
+      </div>
+    </section>
+
+    <section id="quizPanel" class="hidden">
+      <div class="progressBox">
+        <span id="qNum">0/0</span>
+        <div class="progress"><div class="bar" id="prog"></div></div>
+        <span id="miniScore">0 pt</span>
+      </div>
+      <div class="quizCard" id="quizCard"></div>
+      <button class="btn red full" data-action="quitQuiz">Quitter</button>
+    </section>
+
+    <section id="statsPanel" class="hidden"></section>
+  </main>
+
+  <nav class="nav">
+    <button data-action="guide">Guide</button>
+    <button data-action="quizSetup">Quiz</button>
+    <button data-action="stats">Stats</button>
+  </nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
