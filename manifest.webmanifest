@@ -1,0 +1,21 @@
+{
+  "name": "Permis Chasse Sous-Marine",
+  "short_name": "Permis CSM",
+  "description": "Guide et quiz de révision des espèces de Méditerranée pour la chasse sous-marine.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#06111f",
+  "theme_color": "#06111f",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
